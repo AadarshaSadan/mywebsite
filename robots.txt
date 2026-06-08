@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Disallow dynamic URLs & modals
+Disallow: /?s=
+Disallow: /#
+
+# Sitemap
+Sitemap: https://aadarshabajagain.com/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 10
