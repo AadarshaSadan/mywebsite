@@ -4,6 +4,7 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+  initThemeToggle();
   initCustomCursor();
   initHeaderScroll();
   initOverlayMenu();
@@ -13,6 +14,38 @@ document.addEventListener("DOMContentLoaded", () => {
   initArchiveToggle();
   initExpertiseConsole();
 });
+
+/* =========================================================================
+   0. Dark/Light Theme Toggle
+   ========================================================================= */
+function initThemeToggle() {
+  const toggleBtn = document.getElementById("theme-toggle");
+  if (!toggleBtn) return;
+
+  toggleBtn.addEventListener("click", () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  });
+
+  // Dynamically listen to system theme changes if no override is set in localStorage
+  const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  const handleSystemThemeChange = (e) => {
+    if (!localStorage.getItem("theme")) {
+      const systemTheme = e.matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", systemTheme);
+    }
+  };
+
+  if (mediaQuery.addEventListener) {
+    mediaQuery.addEventListener("change", handleSystemThemeChange);
+  } else if (mediaQuery.addListener) {
+    mediaQuery.addListener(handleSystemThemeChange);
+  }
+}
+
 
 /* =========================================================================
    1. Custom Luxury Cursor
