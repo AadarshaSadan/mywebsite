@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>VerifyLabs AI Content Detector | Aadarsha Bajagain</title>
+  <meta name="description" content="VerifyLabs is an AI-powered deep fake verification platform with 99.2% confidence. Headed by Aadarsha Bajagain as Mobile Lead.">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../style.css">
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+      }
+    })();
+  </script>
+  <style>
+    .project-detail-layout {
+      max-width: 900px;
+      margin: 120px auto 60px;
+      padding: 0 24px;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent-color);
+      margin-bottom: 40px;
+      transition: var(--transition-fast);
+    }
+    .back-btn:hover {
+      opacity: 0.8;
+      transform: translateX(-4px);
+    }
+    .project-title {
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .project-meta-info {
+      font-family: var(--font-display);
+      font-size: 14px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 24px;
+      margin-bottom: 40px;
+    }
+    .project-hero-img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      box-shadow: var(--modal-shadow);
+      margin-bottom: 40px;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 48px;
+    }
+    @media (max-width: 768px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+    .project-main h4 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 32px 0 16px;
+      color: var(--accent-color);
+    }
+    .project-main p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      color: var(--text-primary);
+    }
+    .project-main ul {
+      margin-bottom: 24px;
+      padding-left: 0;
+    }
+    .project-main li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 12px;
+      font-size: 15px;
+      color: var(--text-primary);
+    }
+    .project-main li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+    }
+    .project-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .sidebar-widget {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      padding: 24px;
+      border-radius: 8px;
+    }
+    .sidebar-widget-title {
+      font-family: var(--font-display);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      color: var(--accent-color);
+    }
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tech-tag {
+      font-size: 12px;
+      padding: 4px 10px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-muted);
+    }
+  </style>
+  
+  <!-- Structured Data for Project -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "VerifyLabs AI Content Detector",
+    "alternateName": "VerifyLabs AI",
+    "description": "Real-time deep fake detection and media verification for European enterprises.",
+    "url": "https://verifylabs.ai/",
+    "image": "https://aadarshabajagain.com/assets/verifylabs_mockup.png",
+    "creator": {
+      "@type": "Person",
+      "name": "Aadarsha Bajagain",
+      "url": "https://aadarshabajagain.com/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header id="main-header" class="scrolled">
+    <div class="logo serif-font">
+      <a href="/#hero" class="hover-link">Aadarsha.B</a>
+    </div>
+    <div class="header-right">
+      <button id="theme-toggle" class="theme-toggle hover-link" aria-label="Toggle theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <div class="project-detail-layout">
+      <a href="/#ventures" class="back-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to Ventures
+      </a>
+
+      <h1 class="project-title serif-font">VerifyLabs AI Content Detector</h1>
+      <div class="project-meta-info">Precision: 99.2% Overall Confidence | Real-Time Video Scan</div>
+
+      <img src="../../assets/verifylabs_mockup.png" alt="VerifyLabs Mockup" class="project-hero-img">
+
+      <div class="project-grid">
+        <div class="project-main">
+          <p><strong>VerifyLabs</strong> is an AI-powered verification platform built to detect synthesized deep fake imagery, voice replication, and AI-generated textual footprints.</p>
+          
+          <h4>Key Deliverables</h4>
+          <ul>
+            <li>Worked as an Android Engineer, heading native mobile architecture specializing in secure sandbox execution to capture live media and run local verification.</li>
+            <li>Designed real-time REST API interfaces delivering frame-by-frame convolutional analysis and heatmap texture mapping of faces.</li>
+            <li>Implemented Dockerized GPU scaling engines to handle massive upload queues from European corporate verification firms.</li>
+            <li>Ensured strict privacy standards safeguarding user-submitted PII and biometric metadata in compliance with GDPR.</li>
+          </ul>
+        </div>
+
+        <div class="project-sidebar">
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Project Link</h3>
+            <a href="https://verifylabs.ai/" target="_blank" rel="noopener noreferrer" class="btn-secondary hover-link" style="display: block; text-align: center;">Visit Website <span class="arrow">→</span></a>
+          </div>
+
+          <div class="sidebar-widget">
+            <h3 class="sidebar-widget-title">Technologies</h3>
+            <div class="tech-tags">
+              <span class="tech-tag">Kotlin</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">PyTorch (CNN)</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">GPU Instances</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Web Sockets</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-logo serif-font">Aadarsha Bajagain</div>
+      <p class="footer-copy">&copy; 2026 Aadarsha Bajagain. All Rights Reserved. Based in Nepal 🇳🇵</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("theme-toggle");
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          const currentTheme = document.documentElement.getAttribute("data-theme") || "light";
+          const newTheme = currentTheme === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", newTheme);
+          localStorage.setItem("theme", newTheme);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

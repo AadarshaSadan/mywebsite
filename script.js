@@ -885,12 +885,15 @@ function initProjectModals() {
   const projectCards = document.querySelectorAll(".venture-card");
   const modalLinkWrapper = document.getElementById("modal-link-wrapper");
   const modalLink = document.getElementById("modal-link");
+  const modalImageWrapper = document.getElementById("modal-image-wrapper");
+  const modalImage = document.getElementById("modal-image");
 
   if (!modal || !modalClose) return;
 
   // Open modal with specific project data
   projectCards.forEach(card => {
-    card.addEventListener("click", () => {
+    card.addEventListener("click", (e) => {
+      e.preventDefault(); // Prevent page navigation for users
       const projectId = card.getAttribute("data-project");
       const details = projectDetails[projectId];
 
@@ -898,6 +901,15 @@ function initProjectModals() {
         modalTitle.innerText = details.title;
         modalMeta.innerText = details.meta + " | " + details.category;
         modalBody.innerHTML = details.body;
+
+        // Render project mockup image
+        if (details.image && modalImage && modalImageWrapper) {
+          modalImage.src = details.image;
+          modalImage.alt = details.title + " Mockup";
+          modalImageWrapper.style.display = "block";
+        } else if (modalImageWrapper) {
+          modalImageWrapper.style.display = "none";
+        }
 
         if (details.url && modalLink && modalLinkWrapper) {
           modalLink.href = details.url;

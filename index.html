@@ -7,9 +7,8 @@
   <!-- ============================================================
        PRIMARY META TAGS (SEO Core)
        ============================================================ -->
-  <title>Aadarsha Bajagain | CTO & Systems Architect — Ayata Inc.</title>
+  <title>Aadarsha Bajagain | CTO and Systems Architect — Ayata Inc.</title>
   <meta name="description" content="Aadarsha Bajagain is the CTO of Ayata Inc., a systems architect and AI engineer based in Nepal. 8+ years scaling e-learning platforms, FinTech reconciliation engines, deep fake detection AI, and health-tech EHR systems across 150+ global clients.">
-  <meta name="keywords" content="Aadarsha Bajagain, CTO Nepal, Systems Architect, Ayata Inc, AI Engineer, EdTech Nepal, FinTech Nepal, VerifyLabs, Avyaas, Deep Fake Detection, Health Tech Nepal, Software Engineer Nepal, Backend Engineer, Kotlin Android, Full Stack Developer Nepal, Tech Lead Nepal">
   <meta name="author" content="Aadarsha Bajagain">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="theme-color" content="#191919">
@@ -202,6 +201,16 @@
             "item": "https://aadarshabajagain.com/#contact"
           }
         ]
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://aadarshabajagain.com/#profilepage",
+        "url": "https://aadarshabajagain.com/",
+        "name": "Aadarsha Bajagain's Professional Profile",
+        "description": "Professional profile and portfolio of Aadarsha Bajagain, CTO and Systems Architect.",
+        "mainEntity": {
+          "@id": "https://aadarshabajagain.com/#person"
+        }
       }
     ]
   }
@@ -275,6 +284,11 @@
   <link rel="stylesheet" href="style.css">
   <script>
     (function() {
+      // Domain Canonicalization Redirect (Redirect .com.np to .com)
+      if (window.location.hostname === 'aadarshabajagain.com.np' || window.location.hostname === 'www.aadarshabajagain.com.np') {
+        window.location.replace('https://aadarshabajagain.com' + window.location.pathname + window.location.search + window.location.hash);
+      }
+
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
@@ -430,7 +444,7 @@
         <div class="ventures-scroll-wrap" id="ventures-scroll-wrap">
           
           <!-- Card 1: Avyaas -->
-          <div class="venture-card hover-link" data-project="avyaas">
+          <a href="projects/avyaas/" class="venture-card hover-link" data-project="avyaas">
             <div class="venture-header">
               <span class="venture-category">E-Learning / SaaS</span>
               <span class="venture-tag">Avyaas</span>
@@ -445,10 +459,10 @@
               <div class="venture-stats"><span>Users</span>100k+</div>
               <span class="btn-secondary">View Details</span>
             </div>
-          </div>
+          </a>
 
           <!-- Card 2: VerifyLabs -->
-          <div class="venture-card hover-link" data-project="verifylabs">
+          <a href="projects/verifylabs/" class="venture-card hover-link" data-project="verifylabs">
             <div class="venture-header">
               <span class="venture-category">AI / Deep Fake Detection</span>
               <span class="venture-tag">VerifyLabs</span>
@@ -463,10 +477,10 @@
               <div class="venture-stats"><span>Precision</span>99.2%</div>
               <span class="btn-secondary">View Details</span>
             </div>
-          </div>
+          </a>
 
           <!-- Card 4: ASHA Connect & Medicord -->
-          <div class="venture-card hover-link" data-project="asha">
+          <a href="projects/asha/" class="venture-card hover-link" data-project="asha">
             <div class="venture-header">
               <span class="venture-category">Health-Tech / EMR</span>
               <span class="venture-tag">ASHA & Medicord</span>
@@ -481,10 +495,10 @@
               <div class="venture-stats"><span>Patients</span>40k+</div>
               <span class="btn-secondary">View Details</span>
             </div>
-          </div>
+          </a>
 
           <!-- Card 5: Nepra -->
-          <div class="venture-card hover-link" data-project="nepra">
+          <a href="projects/nepra/" class="venture-card hover-link" data-project="nepra">
             <div class="venture-header">
               <span class="venture-category">Circular Economy / B2B</span>
               <span class="venture-tag">Nepra</span>
@@ -499,7 +513,7 @@
               <div class="venture-stats"><span>Model</span>Circular Trade</div>
               <span class="btn-secondary">View Details</span>
             </div>
-          </div>
+          </a>
 
         </div>
       </div>
@@ -1005,6 +1019,9 @@
     <div class="modal-content">
       <h3 class="modal-title serif-font" id="modal-title">Project Title</h3>
       <div class="modal-meta" id="modal-meta">Meta Info</div>
+      <div class="modal-image-wrapper" id="modal-image-wrapper" style="margin-bottom: 20px; display: none;">
+        <img id="modal-image" src="" alt="Project Mockup" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+      </div>
       <div class="modal-link-wrapper" id="modal-link-wrapper" style="margin-bottom: 25px; display: none;">
         <a id="modal-link" href="" target="_blank" class="btn-secondary hover-link">Visit Website <span class="arrow">→</span></a>
       </div>

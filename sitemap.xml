@@ -48,6 +48,32 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Dedicated Project Pages -->
+  <url>
+    <loc>https://aadarshabajagain.com/projects/avyaas/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aadarshabajagain.com/projects/verifylabs/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aadarshabajagain.com/projects/asha/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aadarshabajagain.com/projects/nepra/</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Alternate Domain: aadarshabajagain.com.np -->
   <url>
     <loc>https://aadarshabajagain.com.np/</loc>
